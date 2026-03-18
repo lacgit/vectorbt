@@ -10,6 +10,12 @@ docs/site
 dist
 vectorbt.egg-info
 venvs
+.venv
 .DS_Store
 build
 uv.lock
+.coveragerc
+.ipynb_checkpoints
+.gitattributes
+.github
+.git
