@@ -28,7 +28,9 @@ ARG VBT_EXTRAS=""
 COPY --chown=${NB_UID}:${NB_GID} . /tmp/vectorbt
 
 
-RUN python -m pip install kaleido yfinance \
+RUN python -m pip install kaleido \
+		yfinance backtrader pyportfolioopt python-binance ccxt \
+		aiohttp TA-Lib python-telegram-bot \
     && python -m pip install --no-cache-dir -U pip setuptools wheel \
     && python -m pip install --no-cache-dir "/tmp/vectorbt${VBT_EXTRAS:+[${VBT_EXTRAS}]}" \
     && rm -rf /tmp/vectorbt
